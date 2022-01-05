@@ -21,7 +21,7 @@ $users = [
 
 $loggedIn = false;
 $userExists = false;
-$welcome = "";
+$_SESSION['username'];
 
 if (isset($_POST['username']) && isset($_POST['password']) && (!empty($_POST['username'])) && (!empty($_POST['password']))) {
 
@@ -29,7 +29,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && (!empty($_POST['us
         if ($_POST['username'] == $user['username']) {
             $userExists = true;
             $password = $user['password'];
-            $welcome = "Bienvenue, " . $user['username'];
+            $_SESSION['username'] = $user['username'];
         }
     }
 

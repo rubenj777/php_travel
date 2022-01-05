@@ -30,7 +30,7 @@ require_once "code.php";
                 <input type='submit' name='logout' value='Se déconnecter' class='btn'>
               </form>
             </li>
-            <li><?= $welcome; ?></li>
+            <li>Bienvenue, <?= $_SESSION['username']; ?></li>
 
           <?php } else { ?>
 
@@ -46,13 +46,7 @@ require_once "code.php";
             </li>
 
           <?php }
-
-
           ?>
-
-
-
-
         </ul>
       </div>
     </div>
